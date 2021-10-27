@@ -12,6 +12,7 @@ class Main {
         Scanner player = new Scanner(System.in);
         System.out.println("number is " + String.valueOf(NUMBER));
         while (guess != NUMBER) {
+            userAttempts=1
             System.out.println("Guess a number between 1 and 100");
             guess = player.nextInt();
             if (guess > NUMBER) {
@@ -21,6 +22,9 @@ class Main {
             } else {
                 System.out.println("That's right!");
                 System.exit(0);
+                System.out.println("You took "+userAttempts+"to solve this.....");
+                    
+            userAttempts=userAttempts+1;
             }
         }
     }
